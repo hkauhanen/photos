@@ -23,7 +23,7 @@ darktable-cli "$1" "$1.xmp" thumb/$filename.jpg --width 300 --height 300 --hq tr
 exiftool -overwrite_original -all= thumb/$filename.jpg
 
 # make small image
-darktable-cli "$1" "$1.xmp" small/$filename.jpg --width 800 --height 800 --hq true
+darktable-cli "$1" "$1.xmp" small/$filename.jpg --height 800 --hq true
 exiftool -overwrite_original -all= small/$filename.jpg
 
 # make large image
@@ -46,7 +46,3 @@ echo "+++" >> $mdfilename
 vim $mdfilename
 cp $mdfilename md
 
-# push to github
-git add .
-git commit -m "added photo $filename"
-git push
