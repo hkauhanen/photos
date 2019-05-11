@@ -19,15 +19,15 @@ cp $1 original/$filename.$extension
 cp $1.xmp original/$filename.$extension.xmp
 
 # make thumbnail
-darktable-cli $1 $1.xmp thumb/$filename.jpg --width 300 --height 300 --hq true
+darktable-cli "$1" "$1.xmp" thumb/$filename.jpg --width 300 --height 300 --hq true
 exiftool -overwrite_original -all= thumb/$filename.jpg
 
 # make small image
-darktable-cli $1 $1.xmp small/$filename.jpg --width 800 --height 800 --hq true
+darktable-cli "$1" "$1.xmp" small/$filename.jpg --width 800 --height 800 --hq true
 exiftool -overwrite_original -all= small/$filename.jpg
 
 # make large image
-darktable-cli $1 $1.xmp large/$filename.jpg --width 1600 --height 1600 --hq true
+darktable-cli "$1" "$1.xmp" large/$filename.jpg --width 1600 --height 1600 --hq true
 exiftool -overwrite_original -all= large/$filename.jpg
 
 # add md page to website
