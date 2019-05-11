@@ -30,7 +30,7 @@ exiftool -overwrite_original -all= small/$filename.jpg
 darktable-cli $1 $1.xmp large/$filename.jpg --width 1600 --height 1600 --hq true
 exiftool -overwrite_original -all= large/$filename.jpg
 
-# add md page to website and edit it right away
+# add md page to website
 folder=~/Website/henrin/content/photography
 mdfilename=$folder/$filename.md
 echo "+++" > $mdfilename
@@ -41,4 +41,7 @@ echo "thumb = \"https://github.com/hkauhanen/photos/raw/master/thumb/$filename.j
 echo "small = \"https://github.com/hkauhanen/photos/raw/master/small/$filename.jpg\"" >> $mdfilename
 echo "large = \"https://github.com/hkauhanen/photos/raw/master/large/$filename.jpg\"" >> $mdfilename
 echo "+++" >> $mdfilename
+
+# edit md page right away and place a copy in git repository
 vim $mdfilename
+cp $mdfilename original
