@@ -15,8 +15,8 @@ today=`date +%Y%m%d`
 filename="$filename-$today"
 
 # copy originals
-cp $1 original/$filename.$extension
-cp $1.xmp original/$filename.$extension.xmp
+cp "$1" original/$filename.$extension
+cp "$1.xmp" original/$filename.$extension.xmp
 
 # make thumbnail
 darktable-cli "$1" "$1.xmp" thumb/$filename.jpg --width 300 --height 300 --hq true
