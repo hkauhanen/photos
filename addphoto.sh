@@ -44,7 +44,7 @@ echo "+++" >> $mdfilename
 
 # edit md page right away and place a copy in git repository
 vim $mdfilename
-cp $mdfilename original
+cp $mdfilename md
 
 # push to github
 git add .
