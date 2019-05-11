@@ -1,0 +1,17 @@
+ID = ""
+title = ""
+location = ""
+taken = ""
+film = ""
+EI = ""
+developer = ""
+developerdilution = ""
+developingtime = ""
+developingtemperature = ""
+model = ""
+lens = ""
+digitizationmethod = ""
+categories = ["photo"]
+phototags = []
+draft = false
+flickr = ""
