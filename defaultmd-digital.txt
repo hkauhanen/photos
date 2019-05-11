@@ -1,0 +1,11 @@
+title = ""
+location = ""
+taken = ""
+model = ""
+lens = ""
+notes = ""
+categories = ["photo"]
+phototags = ["digital"]
+draft = false
+enable_comments = true
+flickr = ""
