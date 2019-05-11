@@ -45,3 +45,8 @@ echo "+++" >> $mdfilename
 # edit md page right away and place a copy in git repository
 vim $mdfilename
 cp $mdfilename original
+
+# push to github
+git add .
+git commit -m "added photo $filename"
+git push
