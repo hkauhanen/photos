@@ -21,7 +21,7 @@ cp "$1.xmp" original/$filename.$extension.xmp
 darktable-cli "$1" "$1.xmp" thumb/$filename.jpg --width 300 --height 300 --hq true
 
 # make small image
-darktable-cli "$1" "$1.xmp" small/$filename.jpg --height 800 --hq true
+darktable-cli "$1" "$1.xmp" small/$filename.jpg --height 700 --hq true
 
 # make large image
 darktable-cli "$1" "$1.xmp" large/$filename.jpg --width 1600 --height 1600 --hq true
@@ -32,7 +32,7 @@ mdfilename=$folder/$filename.md
 echo "+++" > $mdfilename
 echo "date = `date +%Y-%m-%d`" >> $mdfilename
 echo "filename = \"$filename.jpg\"" >> $mdfilename
-cat defaultmd.txt >> $mdfilename
+cat defaultmd-digital.txt >> $mdfilename
 echo "thumb = \"https://github.com/hkauhanen/photos/raw/master/thumb/$filename.jpg\"" >> $mdfilename
 echo "small = \"https://github.com/hkauhanen/photos/raw/master/small/$filename.jpg\"" >> $mdfilename
 echo "large = \"https://github.com/hkauhanen/photos/raw/master/large/$filename.jpg\"" >> $mdfilename

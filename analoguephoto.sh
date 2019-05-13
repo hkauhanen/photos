@@ -23,7 +23,7 @@ darktable-cli "$1" "$1.xmp" thumb/$filename.jpg --width 300 --height 300 --hq tr
 exiftool -overwrite_original -all= thumb/$filename.jpg
 
 # make small image
-darktable-cli "$1" "$1.xmp" small/$filename.jpg --height 800 --hq true
+darktable-cli "$1" "$1.xmp" small/$filename.jpg --height 700 --hq true
 exiftool -overwrite_original -all= small/$filename.jpg
 
 # make large image
